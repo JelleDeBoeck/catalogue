@@ -1,5 +1,5 @@
 export const colors = {
-	COLOR_PRIMARY: "#f96163",
+	COLOR_PRIMARY: "#0072FF",
 	COLOR_LIGHT: "#fff",
 	COLOR_DARK: "#000",
 	COLOR_DARK_ALT: "#262626",
@@ -28,7 +28,6 @@ export const productList = [
 		image: require("../assets/images/image1.webp"),
 		price: "€4.2",
 		rating: "4.2",
-		color: "#006A4E",
 		description:
 			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
 	},
@@ -38,7 +37,6 @@ export const productList = [
 		image: require("../assets/images/image2.webp"),
 		price: "€4.2",
 		rating: "4.2",
-		color: "#006A4E",
 		description:
 			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
 	},
@@ -48,7 +46,6 @@ export const productList = [
 		image: require("../assets/images/image3.webp"),
 		price: "€4.2",
 		rating: "4.2",
-		color: "#006A4E",
 		description:
 			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
 	},
@@ -58,7 +55,6 @@ export const productList = [
 		image: require("../assets/images/image4.webp"),
 		price: "€4.2",
 		rating: "4.2",
-		color: "#006A4E",
 		description:
 			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
 	},
@@ -68,7 +64,6 @@ export const productList = [
 		image: require("../assets/images/image5.webp"),
 		price: "€4.2",
 		rating: "4.2",
-		color: "#006A4E",
 		description:
 			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
 	},
@@ -79,7 +74,6 @@ export const productList = [
 		image: require("../assets/images/image6.webp"),
 		price: "€4.2",
 		rating: "4.2",
-		color: "#006A4E",
 		description:
 			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
 	},
