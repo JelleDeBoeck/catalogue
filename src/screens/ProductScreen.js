@@ -2,6 +2,7 @@ import { StyleSheet, View, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import Header from "../components/Header";
 import SearchFilter from "../components/SearchFilter";
+import CategoriesFilter from "../components/CategoriesFilter";
 import ProductCard from "../components/ProductCard";
 
 const ProductScreen = () => {
@@ -10,11 +11,17 @@ const ProductScreen = () => {
             <Header headerText={"Hey, Stijn "} headerIcon={"bell-o"}/>
             <SearchFilter icon="search" placeholder={"Zoek wat specifieker"}/>
 
-            <View style={{ marginTop: 22, flex: 1 }}>
-				<Text style={{ fontSize: 22, fontWeight: "bold" }}>Producten</Text>
+        <View style={{marginTop: 22}}> 
+            <Text style={{fontSize: 22, fontWeight: "bold" }}>Categorieën</Text>
+            <CategoriesFilter />
+        </View>
 
-				<ProductCard/>
-			</View>
+        <View style={{marginTop: 22, flex: 1}}> 
+            <Text style={{fontSize: 22, fontWeight: "bold" }}>Producten</Text>
+
+            <ProductCard/>
+        </View>
+            
         </SafeAreaView>
 
         
