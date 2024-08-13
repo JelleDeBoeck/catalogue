@@ -1,29 +1,29 @@
-import { FlatList, StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import React from 'react';
-import { colors, productList } from '../Constant';
+import { FlatList, StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import React from 'react'
+import { colors } from '../Constant'
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-const ProductCard = () => {
-  const navigation = useNavigation();
-
+const ProductCard = ({ products }) => {
+  const navigation= useNavigation();
+  
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={productList}
-        renderItem={({ item }) => (
-          <Pressable
-            onPress={() => navigation.navigate("DetailsScreen", { item })}
+    <View>
+      <FlatList 
+        data={products}
+        renderItem={({item}) => (
+          <Pressable 
+            onPress={() => navigation.navigate("DetailsScreen", {item})}
             style={styles.card}
           >
-            <Image source={item.image} style={styles.image} />
+            <Image source={item.image} style={styles.image}/>
             <Text style={styles.productName}>{item.name}</Text>
             <View style={styles.priceRow}>
               <Text style={styles.price}>{item.price}</Text>
-              <Text style={styles.separator}> | </Text>
+              <Text> | </Text>
               <View style={styles.ratingContainer}>
                 <Text style={styles.rating}>{item.rating}</Text>
-                <FontAwesome name="star" size={16} color={colors.COLOR_PRIMARY} />
+                <FontAwesome name="star" size={16} color={colors.COLOR_PRIMARY}/>
               </View>
             </View>
           </Pressable>
@@ -39,10 +39,6 @@ const ProductCard = () => {
 export default ProductCard;
 
 const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-    backgroundColor: colors.COLOR_BACKGROUND,
-  },
   card: {
     backgroundColor: colors.COLOR_LIGHT,
     shadowColor: "#000",
@@ -52,13 +48,13 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     marginVertical: 10,
     alignItems: "center",
-    paddingHorizontal: 8,
+    paddingHorizontal: 16,
     paddingVertical: 26,
     width: '48%',
   },
   image: {
-    width: 140,
-    height: 140,
+    width: 120,
+    height: 120,
     resizeMode: "contain",
     marginBottom: 10,
   },
@@ -77,13 +73,7 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 14,
     fontWeight: '600',
-    color: "#666",
-  },
-  separator: {
-    fontSize: 14,
-    paddingLeft: 12,
-    paddingRight: 12,
-    color: colors.COLOR_TEXT_SECONDARY,
+    color: colors.COLOR_PRIMARY,
   },
   ratingContainer: {
     flexDirection: "row",
@@ -92,7 +82,7 @@ const styles = StyleSheet.create({
   rating: {
     fontSize: 14,
     fontWeight: '600',
-    color: "#666",
+    color: colors.COLOR_PRIMARY,
     marginRight: 4,
   },
   columnWrapper: {

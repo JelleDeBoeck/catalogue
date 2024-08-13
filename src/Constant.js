@@ -8,6 +8,10 @@ export const colors = {
 
 export const categories = [
 	{
+		id: "all",
+		category: "Alles",
+	},
+	{
 		id: "01",
 		category: "Dieren",
 	},
@@ -29,53 +33,53 @@ export const productList = [
 		price: "€4.2",
 		rating: "4.2",
 		description:
-			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 	},
 	{
-		id: "02",
-		name: "Crazy Chicken",
+		id: "03",
+		name: "London",
 		image: require("../assets/images/image2.webp"),
 		price: "€4.2",
 		rating: "4.2",
 		description:
-			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 	},
 	{
-		id: "03",
-		name: "Crazy Chicken",
+		id: "01",
+		name: "Dolphin",
 		image: require("../assets/images/image3.webp"),
 		price: "€4.2",
 		rating: "4.2",
 		description:
-			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 	},
 	{
-		id: "04",
-		name: "Crazy Chicken",
-		image: require("../assets/images/image4.webp"),
-		price: "€4.2",
-		rating: "4.2",
-		description:
-			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
-	},
-	{
-		id: "05",
-		name: "Crazy Chicken",
-		image: require("../assets/images/image5.webp"),
-		price: "€4.2",
-		rating: "4.2",
-		description:
-			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
-	},
-	
-	{
-		id: "06",
-		name: "Crazy Chicken",
+		id: "01",
+		name: "Dreamy Cow",
 		image: require("../assets/images/image6.webp"),
 		price: "€4.2",
 		rating: "4.2",
 		description:
-			"A delightful and refreshing dish featuring fresh tuna mixed with zesty lime juice and the crunch of red onion and avocado.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+	},
+	{
+		id: "02",
+		name: "Flowers",
+		image: require("../assets/images/image8.webp"),
+		price: "€4.2",
+		rating: "4.2",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+	},
+	
+	{
+		id: "01",
+		name: "Cozy Koala",
+		image: require("../assets/images/image9.webp"),
+		price: "€4.2",
+		rating: "4.2",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 	},
 	
 ];
