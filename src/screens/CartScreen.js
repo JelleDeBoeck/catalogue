@@ -3,13 +3,10 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome } from '@expo/vector-icons';
 
-const CartScreen = ({ navigation, route }) => {
-  const { item } = route.params; // Ontvang de doorgegeven parameters
+  const CartScreen = ({ navigation, route }) => {
+  const { item } = route.params; 
 
-  // Functie om een item te verwijderen
   const handleRemoveItem = () => {
-    // Logica om het item te verwijderen (optioneel, afhankelijk van je app-logica)
-    // Ga vervolgens terug naar het vorige scherm
     navigation.goBack();
   };
 
@@ -54,11 +51,9 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#0072FF',
   },
-  backButton: {
-    // De terugknop neemt slechts de ruimte in die nodig is, geen flex eigenschap meer
-  },
+ 
   headerTitle: {
-    flex: 1, // Dit zorgt ervoor dat de titel de resterende ruimte opvult
+    flex: 1, 
     color: '#fff',
     fontSize: 20,
     fontWeight: 'bold',

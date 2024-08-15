@@ -1,12 +1,13 @@
-import { FlatList, StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import React from 'react';
+import { FlatList, StyleSheet, Text, View, Pressable } from 'react-native';
+import { Card, Title, Paragraph } from 'react-native-paper';
 import { colors } from '../Constant';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 const ProductCard = ({ products }) => {
   const navigation = useNavigation();
-  
+
   return (
     <FlatList 
       data={products}
@@ -15,15 +16,19 @@ const ProductCard = ({ products }) => {
           onPress={() => navigation.navigate("DetailsScreen", { item })}
           style={styles.card}
         >
-          <Image source={item.image} style={styles.image} />
-          <Text style={styles.productName}>{item.name}</Text>
-          <View style={styles.priceRow}>
-            <Text style={styles.price}>{item.price}</Text>
-            <View style={styles.ratingContainer}>
-              <Text style={styles.rating}>{item.rating}</Text>
-              <FontAwesome name="star" size={16} color="#FFB400" />
-            </View>
-          </View>
+          <Card style={styles.cardContainer}>
+            <Card.Cover source={item.image} style={styles.image} />
+            <Card.Content>
+              <Title style={styles.productName}>{item.name}</Title>
+              <View style={styles.priceRow}>
+                <Text style={styles.price}>{item.price}</Text>
+                <View style={styles.ratingContainer}>
+                  <Text style={styles.rating}>{item.rating}</Text>
+                  <FontAwesome name="star" size={16} color="#FFB400" />
+                </View>
+              </View>
+            </Card.Content>
+          </Card>
         </Pressable>
       )}
       numColumns={2}
@@ -37,57 +42,50 @@ export default ProductCard;
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.COLOR_LIGHT,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.15,
-    shadowRadius: 12,
-    borderRadius: 16,
-    marginVertical: 10,
-    alignItems: "center",
-    padding: 16,
-    width: '48%',
+    marginVertical: 8,
     marginHorizontal: '1%',
-    borderColor: '#eee',
-    borderWidth: 1,
+    width: '48%',
+  },
+  cardContainer: {
+    backgroundColor: colors.COLOR_LIGHT,
+    borderRadius: 12,
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
   },
   image: {
-    width: '100%',
-    height: 140,
-    resizeMode: "cover", 
-    borderRadius: 12,
-    marginBottom: 12,
+    height: 120,
+    resizeMode: "contain",
   },
   productName: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: colors.COLOR_DARK_ALT,
-    textAlign: 'center',
-    marginBottom: 8,
+    color: colors.COLOR_TEXT,
+    marginBottom: 6,
   },
   priceRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: 'center',
-    marginTop: 8,
+    justifyContent: 'space-between',
   },
   price: {
-    fontSize: 16,
-    fontWeight: '700',
+    fontSize: 14,
+    fontWeight: '600',
     color: colors.COLOR_PRIMARY,
   },
   ratingContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginLeft: 10,
   },
   rating: {
     fontSize: 14,
-    fontWeight: '500',
-    color: colors.COLOR_DARK_ALT,
+    fontWeight: '600',
+    color: colors.COLOR_TEXT,
     marginRight: 4,
   },
   columnWrapper: {
     justifyContent: "space-between",
-  },
+  }
 });
