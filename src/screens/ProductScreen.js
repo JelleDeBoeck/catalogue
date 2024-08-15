@@ -1,24 +1,22 @@
-import { StyleSheet, View, Text, SafeAreaView } from "react-native";
-import React, { useState } from "react";
-import Header from "../components/Header";
-import SearchFilter from "../components/SearchFilter";
-import CategoriesFilter from "../components/CategoriesFilter";
-import ProductCard from "../components/ProductCard";
-import { categories, productList } from "../Constant";
+import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import CategoriesFilter from '../components/CategoriesFilter';
+import ProductCard from '../components/ProductCard';
+import { categories, productList } from '../Constant';
 
 const ProductScreen = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState('Alles');
 
-  const filteredProducts = selectedCategory === "all"
+  const filteredProducts = selectedCategory === 'Alles'
     ? productList
-    : productList.filter(product => product.id === selectedCategory);
+    : productList.filter(product => product.category === selectedCategory);
 
   return (
     <SafeAreaView style={styles.container}>
       <Header headerText="Hey, Stijn" headerIcon="bell-o" />
-      <SearchFilter icon="search" placeholder="Zoek wat specifieker" />
 
-      <View style={styles.categoriesSection}> 
+      <View style={styles.categoriesSection}>
         <Text style={styles.sectionTitle}>Categorieën</Text>
         <CategoriesFilter 
           selectedCategory={selectedCategory} 
@@ -26,7 +24,7 @@ const ProductScreen = () => {
         />
       </View>
 
-      <View style={styles.productsSection}> 
+      <View style={styles.productsSection}>
         <Text style={[styles.sectionTitle, styles.productTitle]}>Producten</Text>
         <ProductCard products={filteredProducts} />
       </View>
@@ -44,15 +42,15 @@ const styles = StyleSheet.create({
   },
   categoriesSection: {
     marginTop: 22,
+    marginBottom: 22,
   },
   sectionTitle: {
     fontSize: 22,
-    fontWeight: "bold",
+    fontWeight: 'bold',
+    color: '#333',
   },
   productsSection: {
-    marginTop: 22,
     flex: 1,
-    marginBottom: 36,
   },
   productTitle: {
     marginBottom: 12,
