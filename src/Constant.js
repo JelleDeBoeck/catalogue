@@ -67,7 +67,7 @@ export const productList = [
 	},
 	{
 		category: "Dieren",
-		name: "Moo-velous Journey",
+		name: "Moo-Journey",
 		image: require("../assets/images/image6.webp"),
 		price: "€62,95",
 		rating: "4.2",
@@ -75,7 +75,7 @@ export const productList = [
 	},
 	{
 		category: "Dieren",
-		name: "Galloping Globetrotter",
+		name: "Gallop Globetrotter",
 		image: require("../assets/images/image7.webp"),
 		price: "€67,95",
 		rating: "4.2",
